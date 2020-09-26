@@ -2,11 +2,11 @@ package game;
 
 import player.Player;
 
-public class Easy extends Game {
+public class Hard extends Game {
 	private Player p;
 
-	public Easy(Player p) {
-		super(new Setting(7, 5, 5));
+	public Hard(Player p) {
+		super(new Setting(12, 9, 15));
 		this.p = p;
 	}
 
@@ -18,10 +18,10 @@ public class Easy extends Game {
 	}
 	private void generateWinOrLose(String result){
 		if(result.equals("Win")){
-			p.setEasySuccess(p.getEasySuccess() + 1);
+			p.setHardSuccess(p.getHardSuccess() + 1);
 		}
 		else{
-			p.setEasyFailed(p.getEasyFailed() + 1);
+			p.setHardFailed(p.getHardFailed() + 1);
 		}
 		this.hideMine = false;
 	}
